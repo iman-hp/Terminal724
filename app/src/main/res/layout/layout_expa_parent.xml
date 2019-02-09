@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/purple"
+    android:layoutDirection="ltr"
+    android:layout_height="60dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_number_passenger_ep"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="1"
+            android:textSize="20sp"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/purple"
+            android:background="@drawable/custom_shape_circle_white"/>
+
+    <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="مسافر"
+        android:textSize="20sp"
+        android:layout_marginEnd="@dimen/standard_margin"
+        android:textColor="@color/dark_white"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/standard_margin"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_gravity="center"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/long_margin"
+            app:srcCompat="@drawable/arrowdownwhite"/>
+        <ir.terminal724.www.terminal724.MyView.My_Textview
+            android:id="@+id/txt_age_ep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="بزرگسال"
+            android:textSize="20sp"
+            android:textColor="@color/dark_white"/>
+
+
+    </LinearLayout>
+</RelativeLayout>

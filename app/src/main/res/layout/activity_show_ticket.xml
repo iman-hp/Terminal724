@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Show_Ticket.ShowTicket_Activity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_alignParentStart="true"
+                android:layout_width="30dp"
+                android:layout_centerVertical="true"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/backicon" />
+
+
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="کیش"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_white" />
+
+                    <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KIH"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_white" />
+                </LinearLayout>
+
+                <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/airplane_with_point_layout_white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="تهران"
+                        android:textColor="@color/dark_white" />
+
+                    <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="THR"
+                        android:textColor="@color/dark_white" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_showticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

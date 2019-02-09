@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+        <!--<ir.terminal724.www.terminal724.MyView.My_Textview-->
+        <!--android:id="@+id/txt_systemy_st"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="0.15"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="سیستمی"-->
+        <!--android:padding="2dp"-->
+        <!--android:textColor="@color/purple"-->
+        <!--android:textSize="13sp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:rotation="-90"-->
+        <!--android:background="@drawable/custom_shape_purple_border"-->
+        <!--/>-->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/systemy" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:orientation="vertical"
+            android:paddingBottom="6dp">
+
+            <ImageView
+                android:id="@+id/img_logo_airline_st"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:src="@drawable/mahan" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:id="@+id/txt_airline_name_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_logo_airline_st"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="ماهان"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_flight_numbet_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_flight_number_st"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:text="2658"
+                    android:textColor="@color/purple"
+                    android:textSize="11sp" />
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="ش پرواز"
+                    android:textColor="@color/purple"
+                    android:textSize="9sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="#bfbfbf" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:src="@drawable/clockicon" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="ساعت پرواز"
+                android:textSize="11sp" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:id="@+id/txt_flight_time_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="13 : 30 "
+                android:textColor="@color/purple"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:src="@drawable/chairicon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true">
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_flight_class_st"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:text="B"
+                    android:textSize="13sp" />
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="اکونومی"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true">
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="صندلی خالی"
+                    android:textColor="@color/purple"
+                    android:textSize="9sp" />
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_seat_st"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="9"
+                    android:textColor="@color/purple"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.23"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:src="@drawable/payicon" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true">
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="4dp"
+                    android:text="تومان"
+                    android:textSize="11sp" />
+
+                <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_flight_price_st"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="35000"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <ir.terminal724.www.terminal724.MyView.My_Button
+                android:id="@+id/btn_resume_st"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/custom_shape_purple"
+                android:text="خرید انلاین"
+                android:textColor="@color/dark_white" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple"/>
+</RelativeLayout>

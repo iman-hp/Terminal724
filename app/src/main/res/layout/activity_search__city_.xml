@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent"
+    tools:context=".Search_City.Search_City_Activity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="end"
+        android:background="@color/purple"
+        android:gravity="end">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_back_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/backicon"/>
+
+            <ir.terminal724.www.terminal724.MyView.My_EditText
+                android:singleLine="true"
+                android:id="@+id/edt_search_city"
+                android:textColor="@color/dark_white"
+                android:layout_width="wrap_content"
+                android:textColorHint="#fff"
+                android:backgroundTint="@color/dark_white"
+                android:layout_centerInParent="true"
+                android:hint="نام شهر مورد نظر خود را وارد کنید"
+                android:layout_height="wrap_content" />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/listview_city_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    android:layoutDirection="ltr"
+    android:orientation="vertical"
+    tools:context=".Main.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="end"
+        android:background="@color/dark_white"
+        android:gravity="end">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/menu" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/little_margin"
+        android:orientation="vertical">
+
+        <RadioGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ir.terminal724.www.terminal724.MyView.My_RadioButton
+                android:id="@+id/radiobutton_goinground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/long_margin"
+                android:buttonTint="@color/dark_white"
+                android:text="رفت و برگشت"
+                android:textColor="@color/dark_white" />
+
+            <ir.terminal724.www.terminal724.MyView.My_RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/radiobutton_go"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/dark_white"
+                android:text="یک طرفه"
+                android:textColor="@color/dark_white" />
+
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/little_margin"
+            android:background="@drawable/circle_shape_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:gravity="right"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_marginTop="@dimen/standard_margin"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/takeon" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_select_destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ir.terminal724.www.terminal724.MyView.My_Textview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="به"
+                            android:textColor="@color/purple"
+                            android:textSize="15sp" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                            android:id="@+id/txt_destination_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="مقصد"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Textview
+                            android:id="@+id/txt_destination_abb_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="انتخاب کنید"
+                            android:textColor="@color/purple"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="150dp"
+                    android:background="@color/purple" />
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="8dp">
+
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_marginTop="@dimen/standard_margin"
+                        android:layout_height="30dp"
+                        android:layout_alignParentLeft="true"
+                        app:srcCompat="@drawable/takeoff" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_select_origin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ir.terminal724.www.terminal724.MyView.My_Textview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="از"
+                            android:textColor="@color/purple"
+                            android:textSize="15sp" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                            android:id="@+id/txt_origin_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="مبدا"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Textview
+                            android:id="@+id/txt_origin_abb_main"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="انتخاب کنید"
+                            android:textColor="@color/purple"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:background="@color/purple" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/long_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/long_margin"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/calender_gray" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="انتخاب کنید"
+                            android:textColor="@color/light_gray"
+                            android:textSize="18sp" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Textview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="تاریخ برگشت"
+                            android:textColor="@color/light_gray"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="7dp"
+                    android:layout_height="150dp"
+                    android:background="@color/purple" />
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear_picker_date_origin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/long_margin"
+                        android:layout_marginStart="@dimen/long_margin"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            app:srcCompat="@drawable/calender" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="انتخاب کنید"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <ir.terminal724.www.terminal724.MyView.My_Textview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="تاریخ رفت"
+                            android:textColor="@color/purple"
+                            android:textSize="15sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_search"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_shape_purple"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/search" />
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_white"
+                android:text="جستجوی"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/long_margin"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="6dp"
+            android:padding="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/custom_shape_white_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/train" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="قطار"
+                android:textColor="@color/dark_white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:padding="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/custom_shape_white_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/bus" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="اتوبوس"
+                android:textColor="@color/dark_white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="6dp"
+            android:padding="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/custom_shape_white_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/tour" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تور"
+                android:textColor="@color/dark_white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:padding="6dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/custom_shape_white_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/hotel" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="هتل"
+                android:textColor="@color/dark_white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:padding="6dp"
+            android:layout_weight="0.2"
+            android:background="@drawable/custom_shape_white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_airplane" />
+
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="هواپیما"
+                android:textColor="@color/purple"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_marginTop="@dimen/long_margin"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/standard_margin"
+        android:layout_height="120dp"
+        />
+    <com.daimajia.slider.library.Indicators.PagerIndicator
+        android:id="@+id/custom_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+</LinearLayout>
