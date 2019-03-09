@@ -3,38 +3,28 @@ package ir.terminal724.www.terminal724.Search_City;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.SearchView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
 import ir.terminal724.www.terminal724.Main.MainActivity;
-import ir.terminal724.www.terminal724.MyView.My_EditText;
 import ir.terminal724.www.terminal724.Public.BaseActivity;
 import ir.terminal724.www.terminal724.Public.PublicMethods;
 import ir.terminal724.www.terminal724.Public.tmpApplication;
 import ir.terminal724.www.terminal724.R;
-import ir.terminal724.www.terminal724.Service.Endpoints;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Search_City_Activity extends BaseActivity {
+public class Search_City_Origin_Activity extends BaseActivity {
     ImageView img_back_search;
-    My_EditText edt_search_city;
+    SearchView searchView1;
     ListView listview_city_search;
 
-    ArrayAdapter adapter1;
+    Search_City_Adapter adapter1;
     List<String> persian;
     private ArrayList<Citys> citys;
     private boolean[] selectCity = {false};
@@ -42,7 +32,7 @@ public class Search_City_Activity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search__city_);
+        setContentView(R.layout.activity_search__city_origin);
         bind_Views();
         editTextProcess();
         CreateListPersian();
@@ -52,9 +42,9 @@ public class Search_City_Activity extends BaseActivity {
     }
 
     void bind_Views() {
-        img_back_search = findViewById(R.id.img_back_search);
-        edt_search_city = findViewById(R.id.edt_search_city);
-        listview_city_search = findViewById(R.id.listview_city_search);
+        img_back_search = findViewById(R.id.img_back_search_or);
+        searchView1 = findViewById(R.id.searchView1);
+        listview_city_search = findViewById(R.id.listview_city_search_or);
 
 
 
@@ -72,8 +62,7 @@ public class Search_City_Activity extends BaseActivity {
             for (Citys citys : response) {
                 arrayList.add(citys.getAirportName());
             }
-            adapter1 = new ArrayAdapter(mContext, android.R.layout.simple_list_item_1, arrayList);
-            listview_city_search.setAdapter(adapter1);
+            create_data_city();
         }
     }
 
@@ -104,30 +93,9 @@ public class Search_City_Activity extends BaseActivity {
     }
 
     void create_data_city() {
-        Retrofit retrofit = new Retrofit.Builder().
-                baseUrl("https://www.ravis.ir/")
-                .addConverterFactory(GsonConverterFactory.create()).build();
-        Endpoints endpoints = retrofit.create(Endpoints.class);
-        endpoints.getCities().enqueue(new Callback<ArrayList<Citys>>() {
-            @Override
-            public void onResponse(Call<ArrayList<Citys>> call, Response<ArrayList<Citys>> response) {
-                PublicMethods.saveValue(mContext,"city", new Gson().toJson(response.body()));
-                citys = response.body();
-                List<String> arrayList = new ArrayList<>();
-                for (Citys citys : response.body()) {
-                    arrayList.add(citys.getAirportName());
-                }
-                adapter1 = new ArrayAdapter(mContext, android.R.layout.simple_list_item_1, arrayList);
-                listview_city_search.setAdapter(adapter1);
-
-
-            }
-
-            @Override
-            public void onFailure(Call<ArrayList<Citys>> call, Throwable t) {
-                Toast.makeText(mContext, "اینترنت خود را متصل کنید", Toast.LENGTH_SHORT).show();
-            }
-        });
+        List<POJO_Cities> arrayList=tmpApplication.cities;
+        adapter1 = new Search_City_Adapter(mContext,arrayList);
+        listview_city_search.setAdapter(adapter1);
     }
 
 
@@ -155,23 +123,18 @@ public class Search_City_Activity extends BaseActivity {
     }
 
     void editTextProcess() {
-        edt_search_city.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+       searchView1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+           @Override
+           public boolean onQueryTextSubmit(String query) {
+               return false;
+           }
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                Search_City_Activity.this.adapter1.getFilter().filter(s);
-            }
-        });
-
+           @Override
+           public boolean onQueryTextChange(String newText) {
+               adapter1.getFilter().filter(newText);
+               return false;
+           }
+       });
 
     }
 

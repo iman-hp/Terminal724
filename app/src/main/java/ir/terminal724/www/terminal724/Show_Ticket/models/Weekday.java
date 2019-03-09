@@ -20,7 +20,7 @@ public class Weekday {
     private String date;
     @SerializedName("price")
     @Expose
-    private Integer price;
+    private Double price;
 
     public Boolean getFlag() {
         return flag;
@@ -54,11 +54,11 @@ public class Weekday {
         this.date = date;
     }
 
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

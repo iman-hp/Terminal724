@@ -11,7 +11,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Show_Ticket.ShowTicket_Activity" />
+        <activity android:name=".Show_Ticket.MVP.ST_Activity" />
         <activity
             android:name=".Select_Passengers.SelectPassengers_Activity"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
@@ -31,7 +31,8 @@
         <activity android:name=".Check_Information_Page.Chech_Information_Activity">
 
         </activity>
-        <activity android:name=".Search_City.Search_City_Activity"></activity>
+        <activity android:name=".Search_City.Search_City_Origin_Activity"/>
+        <activity android:name=".Search_City.Search_City_dest_Activity"/>
     </application>
 
 </manifest>

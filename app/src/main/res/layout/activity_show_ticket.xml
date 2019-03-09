@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rootlayout"
     android:orientation="vertical"
-    tools:context=".Show_Ticket.ShowTicket_Activity">
+    tools:context=".Show_Ticket.MVP.ST_Activity">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_st"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/purple">
@@ -16,18 +18,27 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:id="@+id/txt_date_top_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_white"
+                android:textSize="11sp"
+                android:layout_centerHorizontal="true"
+                android:text="1397/08/09"/>
             <ImageView
-                android:layout_alignParentStart="true"
+                android:id="@+id/img_back_st"
                 android:layout_width="30dp"
-                android:layout_centerVertical="true"
                 android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
                 app:srcCompat="@drawable/backicon" />
 
 
             <LinearLayout
-                android:layout_centerInParent="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:gravity="center">
 
                 <LinearLayout
@@ -37,21 +48,27 @@
                     android:orientation="vertical">
 
                     <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:id="@+id/txt_des_top_st"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="کیش"
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_white" />
+                        android:textColor="@color/dark_white"
+                        android:textSize="14sp" />
 
                     <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:id="@+id/txt_des_code_top_st"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="KIH"
-                        android:textSize="12sp"
-                        android:textColor="@color/dark_white" />
+                        android:textColor="@color/dark_white"
+                        android:textSize="12sp" />
                 </LinearLayout>
 
-                <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/airplane_with_point_layout_white" />
+                <include
+                    layout="@layout/airplane_with_point_layout_white"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_height="wrap_content" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -59,16 +76,20 @@
                     android:orientation="vertical">
 
                     <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:id="@+id/txt_origin_top_st"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="تهران"
-                        android:textColor="@color/dark_white" />
+                        android:textColor="@color/dark_white"
+                        android:textSize="14sp" />
 
                     <ir.terminal724.www.terminal724.MyView.My_Textview
+                        android:id="@+id/txt_origin_code_top_st"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="THR"
-                        android:textColor="@color/dark_white" />
+                        android:textColor="@color/dark_white"
+                        android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -79,8 +100,32 @@
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_showticket"
+        android:id="@+id/recycler_weekday"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="70dp"
+        android:layout_below="@+id/toolbar_st" />
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler_weekday"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_showticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.cooltechworks.views.shimmer.ShimmerRecyclerView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/shimmer_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar_st"
+        android:layout_height="wrap_content"
+        app:shimmer_demo_layout_manager_type="linear_vertical"
+        app:shimmer_demo_child_count="10"
+        app:shimmer_demo_layout="@layout/shimmer_child_layout_st"
+        app:shimmer_demo_angle="20"
+        />
+</RelativeLayout>

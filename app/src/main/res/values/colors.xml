@@ -3,11 +3,16 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
-    <color name="purple">#b0276f</color>
-    <color name="purple2">#933EC5</color>
+    <color name="purple">#6F0F42</color>
+    <color name="purple2">#A01C62</color>
     <color name="dark_gray">#2d2d2d</color>
     <color name="light_gray">#979797</color>
+    <color name="light">#CECBCB</color>
     <color name="dark_white">#ededed</color>
     <color name="transparent">#00000000</color>
     <color name="black">#0a0a0a</color>
+    <color name="mdtp_accent_color">#6F0F42</color>
+    <color name="green_color">#118D74</color>
+    <color name="red_color">#B82A5A</color>
+    <!--<color name="mdtp_accent_color_dark">#00796b</color>-->
 </resources>

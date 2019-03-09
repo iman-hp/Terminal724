@@ -1,4 +1,4 @@
-package ir.terminal724.www.terminal724.Show_Ticket;
+package ir.terminal724.www.terminal724.Show_Ticket.models;
 
 public class ShowTicket_Model {
     String airline;

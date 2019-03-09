@@ -563,7 +563,7 @@
                             android:layout_height="25dp"
                             android:layout_marginEnd="@dimen/standard_margin"
                             android:layout_weight="0.5"
-                            android:background="@drawable/custom_button_red"
+                            android:background="@drawable/custom_button_red_border"
                             android:text="انصراف"
                             android:textColor="#d91212" />
 
@@ -571,7 +571,7 @@
                             android:layout_width="0dp"
                             android:layout_height="25dp"
                             android:layout_weight="0.5"
-                            android:background="@drawable/custom_button_green"
+                            android:background="@drawable/custom_button_green_border"
                             android:text="ویرایش"
                             android:textColor="#44ac1a" />
                     </LinearLayout>

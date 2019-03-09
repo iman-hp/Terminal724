@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:gravity="end"
+    android:background="@color/transparent"
+    android:layout_height="40dp">
+
+    <ir.terminal724.www.terminal724.MyView.My_Textview
+        android:id="@+id/txt_title_list_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/dark_white"
+        android:layout_gravity="center"
+        android:text="بلط های من"/>
+    <ImageView
+        android:id="@+id/img_title_list_drawer"
+        android:layout_marginEnd="8dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"/>
+</LinearLayout>

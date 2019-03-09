@@ -13,10 +13,12 @@ public class My_RadioButton extends AppCompatRadioButton {
 
     public My_RadioButton(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setFont(context);
     }
 
     public My_RadioButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setFont(context);
     }
     private void setFont(Context context) {
         Typeface face=Typeface.createFromAsset(context.getAssets(),"IRANSans.ttf");

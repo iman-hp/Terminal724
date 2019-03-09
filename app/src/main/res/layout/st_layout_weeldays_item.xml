@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:id="@+id/relative_weekday"
+    android:background="@color/purple2"
+    android:layout_height="60dp">
+<LinearLayout
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+<ir.terminal724.www.terminal724.MyView.My_Textview
+    android:id="@+id/txt_weekday_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="11sp"
+    android:textColor="@color/dark_white"
+    android:text="1397/08/09"/>
+<ir.terminal724.www.terminal724.MyView.My_Textview
+    android:id="@+id/txt_weekday_day"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="9sp"
+    android:textColor="@color/dark_white"
+    android:text="چهارشنبه"/>
+<ir.terminal724.www.terminal724.MyView.My_Textview
+    android:id="@+id/txt_weekday_price"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/dark_white"
+    android:textSize="11sp"
+    android:text="235000"/>
+
+
+</LinearLayout>
+<View
+    android:layout_width="2dp"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:background="@color/purple"/>
+
+
+</RelativeLayout>

@@ -4,14 +4,41 @@ package ir.terminal724.www.terminal724.Show_Ticket.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 public class Flight {
+    public static class Sortbyroll implements Comparator<Flight> {
+        // Used for sorting in ascending order of
+        // roll number
+        public int compare(Flight a, Flight b) {
+            return a.getPriceView().intValue() - b.getPriceView().intValue();
+        }
+    }
+    public static class SortByTime implements Comparator<Flight> {
+        // Used for sorting in ascending order of
+        // roll number
+        public int compare(Flight a, Flight b) {
+            String[] clocka = a.getFlightTime().split(":");
+            String[] clockb = b.getFlightTime().split(":");
+            Long aI = Long.parseLong((clocka[0]));
+            Long bI = Long.parseLong(clockb[0]);
+//            if (aI<12){
+//                aI+=12;
+//            }
+//            if (bI<12){
+//                bI+=12;
+//            }
+
+            return aI.intValue() - bI.intValue();
+        }
+    }
 
     @SerializedName("flightId")
     @Expose
-    private Integer flightId;
+    private Long flightId;
     @SerializedName("classId")
     @Expose
-    private Integer classId;
+    private Long classId;
     @SerializedName("kndSys")
     @Expose
     private Integer kndSys;
@@ -47,7 +74,7 @@ public class Flight {
     private Object capCount;
     @SerializedName("priceView")
     @Expose
-    private Integer priceView;
+    private double priceView;
     @SerializedName("className")
     @Expose
     private String className;
@@ -79,19 +106,19 @@ public class Flight {
     @Expose
     private String faranegarId;
 
-    public Integer getFlightId() {
+    public long getFlightId() {
         return flightId;
     }
 
-    public void setFlightId(Integer flightId) {
+    public void setFlightId(long flightId) {
         this.flightId = flightId;
     }
 
-    public Integer getClassId() {
+    public long getClassId() {
         return classId;
     }
 
-    public void setClassId(Integer classId) {
+    public void setClassId(long classId) {
         this.classId = classId;
     }
 
@@ -183,7 +210,7 @@ public class Flight {
         this.capCount = capCount;
     }
 
-    public Integer getPriceView() {
+    public Double getPriceView() {
         return priceView;
     }
 

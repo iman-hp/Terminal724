@@ -13,6 +13,9 @@ public class POJO_Cities {
         this.country = country;
     }
 
+    public POJO_Cities(String city_persian, String country, String city_code) {
+    }
+
     public String getCity_persian() {
         return city_persian;
     }

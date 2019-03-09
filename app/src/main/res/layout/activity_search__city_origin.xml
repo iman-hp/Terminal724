@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layoutDirection="ltr"
     android:layout_height="match_parent"
-    tools:context=".Search_City.Search_City_Activity">
+    tools:context=".Search_City.Search_City_Origin_Activity">
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -18,22 +18,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:id="@+id/img_back_search"
+                android:id="@+id/img_back_search_or"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 app:srcCompat="@drawable/backicon"/>
 
-            <ir.terminal724.www.terminal724.MyView.My_EditText
-                android:singleLine="true"
-                android:id="@+id/edt_search_city"
-                android:textColor="@color/dark_white"
+            <SearchView
+                android:id="@+id/searchView1"
                 android:layout_width="wrap_content"
-                android:textColorHint="#fff"
-                android:backgroundTint="@color/dark_white"
-                android:layout_centerInParent="true"
-                android:hint="نام شهر مورد نظر خود را وارد کنید"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:background="@color/dark_white"
+                android:queryHint="شهر خود را انتخاب کنید" >
+
+            </SearchView>
 
 
 
@@ -42,7 +43,7 @@
     </android.support.v7.widget.Toolbar>
 
     <ListView
-        android:id="@+id/listview_city_search"
+        android:id="@+id/listview_city_search_or"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

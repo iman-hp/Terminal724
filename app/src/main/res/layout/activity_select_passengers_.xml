@@ -151,6 +151,7 @@
             android:orientation="vertical">
 
             <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                android:id="@+id/txt_des_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="کیش"
@@ -158,6 +159,7 @@
                 android:textSize="20sp" />
 
             <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                android:id="@+id/txt_des_abb_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="KIH"
@@ -173,6 +175,7 @@
             android:orientation="vertical">
 
             <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:id="@+id/txt_date_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -182,6 +185,7 @@
             <include layout="@layout/airplane_with_point_layout" />
 
             <ir.terminal724.www.terminal724.MyView.My_Textview
+                android:id="@+id/txt_time_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -198,6 +202,7 @@
             android:orientation="vertical">
 
             <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                android:id="@+id/txt_origin_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="تهران"
@@ -205,6 +210,7 @@
                 android:textSize="20sp" />
 
             <ir.terminal724.www.terminal724.MyView.My_Bold_TextView
+                android:id="@+id/txt_origin_abb_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="THR"
@@ -329,21 +335,24 @@
                 android:padding="4dp">
 
                 <ImageView
+                    android:id="@+id/img_min_baby_sp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:src="@drawable/minuswhite" />
 
                 <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_baby_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginEnd="8dp"
-                    android:text="1"
+                    android:text="0"
                     android:textColor="@color/dark_white"
                     android:textSize="30sp" />
 
                 <ImageView
+                    android:id="@+id/img_max_baby_sp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -365,12 +374,14 @@
                 android:padding="4dp">
 
                 <ImageView
+                    android:id="@+id/img_min_child_sp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:src="@drawable/minuswhite" />
 
                 <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_child_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
@@ -380,6 +391,7 @@
                     android:textSize="30sp" />
 
                 <ImageView
+                    android:id="@+id/img_max_child_sp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -400,6 +412,7 @@
                 android:padding="4dp">
 
                 <ImageView
+                    android:id="@+id/img_min_adult_sp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
 
@@ -407,6 +420,7 @@
                     android:src="@drawable/minuswhite" />
 
                 <ir.terminal724.www.terminal724.MyView.My_Textview
+                    android:id="@+id/txt_adult_count"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -418,6 +432,7 @@
                     android:textSize="30sp" />
 
                 <ImageView
+                    android:id="@+id/img_max_adult_sp"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
@@ -431,6 +446,7 @@
             android:layout_marginTop="16dp">
 
             <ir.terminal724.www.terminal724.MyView.My_Button
+                android:id="@+id/btn_cancell_sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -441,6 +457,7 @@
                 android:textSize="20sp" />
 
             <ir.terminal724.www.terminal724.MyView.My_Button
+                android:id="@+id/btn_resume_sp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"

@@ -29,7 +29,13 @@
         </RelativeLayout>
 
     </android.support.v7.widget.Toolbar>
-
+    <LinearLayout
+        android:id="@+id/linear_edit_passengers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="invisible"/>
     <LinearLayout
         android:id="@+id/linear_show_level"
         android:layout_width="match_parent"
@@ -164,6 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_expa"
             android:layout_width="match_parent"
@@ -172,6 +179,7 @@
                 android:id="@+id/txt_title_leader"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:textColor="@color/purple"
                 android:layout_below="@+id/recycler_expa"
                 android:layout_centerHorizontal="true"
@@ -198,7 +206,7 @@
                     android:layout_marginEnd="4dp"
                     app:srcCompat="@drawable/homecall" />
 
-                <ir.terminal724.www.terminal724.MyView.My_Textview
+                <ir.terminal724.www.terminal724.MyView.My_EditText
                     android:id="@+id/txt_home_phone_leader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -223,7 +231,7 @@
                     android:layout_marginEnd="4dp"
                     app:srcCompat="@drawable/thelephone" />
 
-                <ir.terminal724.www.terminal724.MyView.My_Textview
+                <ir.terminal724.www.terminal724.MyView.My_EditText
                     android:id="@+id/txt_mobile_phone_leader"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

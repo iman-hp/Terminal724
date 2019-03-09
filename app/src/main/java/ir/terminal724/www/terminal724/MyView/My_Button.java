@@ -13,10 +13,12 @@ public class My_Button extends AppCompatButton {
 
     public My_Button(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setFont(context);
     }
 
     public My_Button(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setFont(context);
     }
 
     private void setFont(Context context) {
