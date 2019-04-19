@@ -1,10 +1,7 @@
 apply plugin: 'com.android.library'
-group ='com.github.iman-hp'
+group = 'com.github.iman-hp'
 android {
     compileSdkVersion 28
-
-
-
     defaultConfig {
         minSdkVersion 18
         targetSdkVersion 28

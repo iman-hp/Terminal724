@@ -45,7 +45,7 @@ public class Drawer_Adapter extends BaseAdapter {
         My_Textview txt_title_list_drawer;
         img_title_list_drawer=v.findViewById(R.id.img_title_list_drawer);
         txt_title_list_drawer=v.findViewById(R.id.txt_title_list_drawer);
-        Picasso.with(mContext).load(list.get(position).getIcon()).into(img_title_list_drawer);
+        Picasso.get().load(list.get(position).getIcon()).into(img_title_list_drawer);
         txt_title_list_drawer.setText(list.get(position).getTitle());
 
         return v;
